@@ -10,7 +10,7 @@ This project is part of the Programming Languages 3 course at TAMK, aiming to ap
 2. **2 Points:** Binary searching.
 3. **3 Points:** Quadratic sorting.
 4. **4 Points:** Logarithmic sorting.
-5. **5 Points:** Sorting performance analyzation (not implemented yet).
+5. **5 Points:** Sorting performance analyzation.
 
 ## To Run Code Locally
 

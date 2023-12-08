@@ -24,7 +24,7 @@ public class Main {
                     logarithmicSorting(scanner);
                     break;
                 case "5":
-                    System.out.println("This function has not been implemented yet!");
+                    PerformanceAnalyzator.analyzing();
                     break;
                 case "q":
                 case "Q":
@@ -64,7 +64,8 @@ public class Main {
         System.out.println("\nData set before insertion sorting:");
         printArray(randomArray);
         System.out.println("\n\nData set after insertion sorting:");
-        Integer[] sortedArray = InsertionSort.insertionSort(randomArray);
+        InsertionSort is = new InsertionSort();
+        Integer[] sortedArray = is.insertionSort(randomArray);
         printArray(sortedArray);
         System.out.println("\n");
     }
@@ -74,7 +75,8 @@ public class Main {
         System.out.println("\nData set before quicksort:");
         printArray(randomArray);
         System.out.println("\n\nData set after quicksort:");
-        Integer[] sortedArray = QuickSort.quickSort(randomArray);
+        QuickSort qs = new QuickSort();
+        Integer[] sortedArray = qs.quickSort(randomArray);
         printArray(sortedArray);
         System.out.println("\n");
     }
