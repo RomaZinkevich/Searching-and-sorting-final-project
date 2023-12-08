@@ -3,7 +3,6 @@ public class BubbleSort {
 
     public <Int extends Comparable<Integer>> void bubbleSort(Integer[] data){
         int position, scan;
-        int temp;
 		
         for (position =  data.length - 1; position >= 0; position--)
         {
