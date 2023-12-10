@@ -1,3 +1,4 @@
+// Utility class for counting comparisons during sorting operations.
 public class SortingCounter {
     private long counter=0;
 

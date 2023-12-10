@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         boolean isRunning=true;
-        // Integer[] array = {1, 12 ,5};
-        // boolean result = LinearSearch.linearSearch(array,0,3,12);
-        // System.out.println(result);
         Scanner scanner = new Scanner(System.in);
+        //Console menu that stops when Q or q is typed
         while (isRunning){
             System.out.print("Menu of Searching and Sorting Testbed.\n\n1)  Linear searching\n2)  Binary searching\n3)  O(n^2) type of sorting\n4)  O(n*log(n)) type of sorting\n5)  Sorting performance\n\nq/Q) Quit\n\nYour choice: ");
             String choice = scanner.next();
@@ -32,7 +30,7 @@ public class Main {
                     isRunning=false;
                     break;
                 default:
-                    System.out.println("Man wtf there was no option like that. Let's pretend it didn't happen and try again!");
+                    System.out.println("There was no option like that. Let's pretend it didn't happen and try again!");
                     break;
             }
         }
@@ -60,7 +58,8 @@ public class Main {
     }
 
     public static void quadraticSorting(Scanner scanner){
-        Integer[] randomArray = RandomArrayGenerator.randomArrayGenerator(10);
+        //generates array with random numbers in it
+        Integer[] randomArray = RandomArrayGenerator.generateRandomArray(10);
         System.out.println("\nData set before insertion sorting:");
         printArray(randomArray);
         System.out.println("\n\nData set after insertion sorting:");
@@ -71,7 +70,8 @@ public class Main {
     }
 
     public static void logarithmicSorting(Scanner scanner){
-        Integer[] randomArray = RandomArrayGenerator.randomArrayGenerator(10);
+        //generates array with random numbers in it
+        Integer[] randomArray = RandomArrayGenerator.generateRandomArray(10);
         System.out.println("\nData set before quicksort:");
         printArray(randomArray);
         System.out.println("\n\nData set after quicksort:");
@@ -82,7 +82,7 @@ public class Main {
     }
 
     public static void printArray(Integer[] array){
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < array.length; i++){
             System.out.print(array[i]);
             System.out.print(" ");
         }

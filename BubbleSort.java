@@ -8,7 +8,7 @@ public class BubbleSort {
         {
             for (scan = 0; scan <= position - 1; scan++)
             {
-                if (sc.isMore(data[scan],data[scan+1]))
+                if (sc.isMore(data[scan],data[scan+1])) //comparison "x > y" but with counter inside
                     swap(data, scan, scan + 1);
             }
         }
@@ -20,7 +20,7 @@ public class BubbleSort {
         data[index2] = temp;
     }
 
-    public long getCounter(){
+    public long getCounter(){ //returns amount of comparisons made during sorting
         return sc.getCounter();
     }
 }

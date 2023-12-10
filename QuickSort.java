@@ -6,6 +6,7 @@ public class QuickSort {
         return data;
     }
 
+    //Recursions method
     private <Int extends Comparable<Integer>> void quickSort(Integer[] data, int min, int max){
         if (min < max){
             int indexofpartition = partition(data, min, max);
@@ -24,9 +25,9 @@ public class QuickSort {
         left = min;
         right = max;
         while (left < right){
-            while (sc.isLess(left, right) && data[left].compareTo(partitionelement) <= 0)
+            while (sc.isLess(left, right) && data[left].compareTo(partitionelement) <= 0) 
                 left++;
-            while (sc.isMore(data[right], partitionelement))
+            while (sc.isMore(data[right], partitionelement))//comparison "x > y" but with counter inside
                 right--;
             if (left < right)
                 swap(data, left, right);
@@ -41,7 +42,7 @@ public class QuickSort {
         data[index2] = temp;
     }
 
-    public long getCounter(){
+    public long getCounter(){//returns amount of comparisons made during sorting
         return sc.getCounter();
     }
 }

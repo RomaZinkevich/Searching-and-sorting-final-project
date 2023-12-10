@@ -5,6 +5,7 @@ public class MergeSort {
         mergeSort(data, 0, data.length - 1);
 	}
 	
+    //Recursion method
 	private <T extends Comparable<T>> void mergeSort(Integer[] data, int min, int max){
         if (min < max)
         {
@@ -24,7 +25,7 @@ public class MergeSort {
 		
         while (first1 <= last1 && first2 <= last2)
         {
-            if (sc.isLess(data[first1], data[first2]))
+            if (sc.isLess(data[first1], data[first2])) //comparison "x < y" but with counter inside
             {
                 temp[index] = data[first1];
                 first1++;
@@ -55,7 +56,7 @@ public class MergeSort {
             data[index] = temp[index];
     }		
 
-    public long getCounter(){
+    public long getCounter(){//returns amount of comparisons made during sorting
         return sc.getCounter();
     }
 }

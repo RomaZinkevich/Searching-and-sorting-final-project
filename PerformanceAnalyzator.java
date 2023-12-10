@@ -1,4 +1,3 @@
-
 public class PerformanceAnalyzator {
 
     public static  void analyzing(){
@@ -11,15 +10,17 @@ public class PerformanceAnalyzator {
         System.out.println();
         for (String algorithm : algorithms) {
             System.out.printf("%-40s", algorithm+",random,comparisons");
+            //for-loop that calculates amount of comparisons it takes to sort array with different sizes of the array
             for (int size : sizes) {
-                Integer[] array = RandomArrayGenerator.randomArrayGenerator(size);
-                long counter = sortAndCount(array, algorithm);
+                Integer[] array = RandomArrayGenerator.generateRandomArray(size); //generates array with random numbers in it
+                long counter = sortAndCount(array, algorithm); //method that helps to use different sorting methods
                 System.out.printf("%-15d", counter);
             }
             System.out.println();
             System.out.printf("%-40s", algorithm+",random,ms");
+            //for-loop that calculates time it takes to sort array with different sizes of the array
             for (int size : sizes) {
-                Integer[] array = RandomArrayGenerator.randomArrayGenerator(size);
+                Integer[] array = RandomArrayGenerator.generateRandomArray(size);
                 long startTime = System.currentTimeMillis();
                 sortAndCount(array, algorithm);
                 long endTime = System.currentTimeMillis();

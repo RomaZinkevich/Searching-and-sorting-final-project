@@ -4,7 +4,7 @@ public class LinearSearch {
         int index = min;
         boolean found = false;
 
-        while (!found && index <= max) 
+        while (!found && index <= max)
         {
             found = data[index].equals(target);
             index++;

@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class RandomArrayGenerator {
-    public static Integer[] randomArrayGenerator(int size){
+    public static Integer[] generateRandomArray(int size){
         Random random = new Random();
         Integer[] array = new Integer[size];
         for (int i = 0; i < size; i++){

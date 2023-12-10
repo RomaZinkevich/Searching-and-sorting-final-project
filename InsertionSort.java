@@ -6,7 +6,7 @@ public class InsertionSort {
             int key = data[index];
             int position = index;
 
-            while (position > 0 && sc.isMore(data[position-1], key)){
+            while (position > 0 && sc.isMore(data[position-1], key)){ // sc.isMore() is comparison "x > y" but with counter inside
                 data[position] = data[position-1];
                 position--;
             }
@@ -16,7 +16,7 @@ public class InsertionSort {
         return data;
     }
 
-    public long getCounter(){
+    public long getCounter(){//returns amount of comparisons made during sorting
         return sc.getCounter();
     }
 
